@@ -1,0 +1,19 @@
+dbt_project_name:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: airflow
+      password: airflow
+      dbname: airflow
+      schema: public
+      port: 5432
+      threads: 1
+      keepalives_idle: 0
+      connect_timeout: 10
+      timeout: 300
+      retries: 1
+      search_path: public
+      schemas:
+        - public
